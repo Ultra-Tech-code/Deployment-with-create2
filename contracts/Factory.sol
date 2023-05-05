@@ -45,7 +45,7 @@ contract Factory {
      * @param   salt  . A random bytes used to precompute an address
      * @param   bytecode  .byte code of the contract to be deployed
     */
-    function createContract(bytes32 salt, bytes memory bytecode) public returns(address){
+    function createContract(bytes32 salt, bytes memory bytecode) public{
         address contractAddress;
         assembly {
             contractAddress := create2(0, add(bytecode, 0x20), mload(bytecode), salt)
@@ -55,7 +55,6 @@ contract Factory {
         }
 
         emit NewContract(contractAddress);
-        return contractAddress;
     }
 
      /**
