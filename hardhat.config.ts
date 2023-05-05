@@ -5,7 +5,7 @@ require("dotenv").config();
 
 type HttpNetworkAccountsUserConfig = any;
 const config: HardhatUserConfig = {
-  solidity: "0.8.4",
+  solidity: "0.8.0",
   networks: {
     alfajores: {
       url: "https://alfajores-forno.celo-testnet.org",
