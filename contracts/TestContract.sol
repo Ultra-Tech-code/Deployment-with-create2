@@ -34,7 +34,7 @@ contract TestContract {
     }
 
     /**
-     * @notice  . A View Function to get the ether balance of the contract
+     * @notice  . A View Function to get the celo balance of the contract
      * @dev     . returns ether balance of the contract
      */
     function getBalance() public view returns (uint256) {
@@ -42,7 +42,7 @@ contract TestContract {
     }
 
     /**
-     * @notice  . A Function to withdraw the ether balance of the contract
+     * @notice  . A Function to withdraw the celo balance of the contract
      * @dev     . Only admin/owner can call the function
      */
     function withdraw() external onlyAdmin {
@@ -50,7 +50,7 @@ contract TestContract {
     }
 
     /**
-     * @notice  . A Function to receive ether sent directly to this contract without a function call.
+     * @notice  . A Function to receive celo Token sent directly to this contract without a function call.
      * @dev     . similar to a fallback function.
      */
     receive() external payable{}
